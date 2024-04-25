@@ -14,4 +14,4 @@ I specialize in creating captivating landing pages that drive engagement and con
 
 ## Contact
 - 📧 Email: johnyangeles25@gmail.com
-- 💼 LinkedIn: [YourLinkedInProfile](https://linkedin.com/in/YourLinkedInProfile)
+- 💼 LinkedIn: [LinkedInProfile](https://linkedin.com/in/YourLinkedInProfile)
