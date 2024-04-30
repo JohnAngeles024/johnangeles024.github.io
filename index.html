@@ -35,7 +35,8 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 
 	<!-- <script type="text/javascript" src="assetsjs/jquery.tile.min.js"></script> -->
-	<script src="assets/js/index.js" defer></script>
+    <script src="assets/js/loader.js"  defer></script>
+	<script src="assets/js/index.js"></script>
     <script src="assets/js/top.js"></script>
     <script src="assets/js/skills.js"></script>
     <link rel="sitemap" type="application/xml" title="Sitemap" href="https://johnangeles024.github.io/sitemap.xml">
@@ -60,6 +61,7 @@
 	<!-- 内容ここから -->
 
 	<div class="page"  >
+        <canvas class="loader"  id="canvas"></canvas>
         <button class="btn"></button>
 		<nav class="nav">
 			<div class="nav__logo">
@@ -769,28 +771,28 @@
 
         <section class="contacts" id="contacts">
             <h2 class="contacts__heading">Get In Touch</h2>
+            <ul class="contacts__list">
+                <li class="contacts__item"> <a href="https://github.com/JohnAngeles024"  target="_blank" > <i class="fab fa-github-square"></a></i></li>
+                <li class="contacts__item"> <a href="https://www.linkedin.com/in/john-william-angeles-69227a1b2/"  target="_blank"><i class="fab fa-linkedin"></i></a> </li>
+                <li class="contacts__item"> <a href="https://www.facebook.com/johny.angeles.9/"  target="_blank"><i class="fab fa-facebook-square"></i></a> </li>
+                <li class="contacts__item"> <a href="viber://chat?number=09162453362"  target="_blank"><i class="fab fa-viber"></i></a></li>
+            </ul>
             <p class="contacts__text">I’m currently looking for any job opportunities, 
                  Whether you have a question or just want to say hi,<br> my inbox is always open. I’ll try my best to response immediately!</p>
                  <div class="contacts__wrapper">
-                 <ul class="contacts__list">
-                     <li class="contacts__item"> <a href="https://github.com/JohnAngeles024"  target="_blank" > <i class="fab fa-github-square"></a></i></li>
-                     <li class="contacts__item"> <a href="https://www.linkedin.com/in/john-william-angeles-69227a1b2/"  target="_blank"><i class="fab fa-linkedin"></i></a> </li>
-                     <li class="contacts__item"> <a href="https://www.facebook.com/johny.angeles.9/"  target="_blank"><i class="fab fa-facebook-square"></i></a> </li>
-                     <li class="contacts__item"> <a href="viber://chat?number=09162453362"  target="_blank"><i class="fab fa-viber"></i></a></li>
-                 </ul>
-                <iframe class="contacts__form" src="https://docs.google.com/forms/d/16tKhh-mJNiCwqIqRMoGzDiX8C7a12oPoVMWjOiUu7aE/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                 <form name="" netlify>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Send</button>
+                  </form>
                 </div>
         </section>
 	</div>
-    <form name="contact" netlify>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        <button type="submit">Send</button>
-      </form>
+ 
 </main>
 <script src="assets/js/particles.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
