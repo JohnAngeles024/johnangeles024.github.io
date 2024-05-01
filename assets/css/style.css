@@ -347,9 +347,7 @@ html {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  /* Ensure it's above other content */
   background-color: #000;
-  /* Set background color */
 }
 
 .page .content {
@@ -752,9 +750,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media screen and (max-width: 768px) {
@@ -764,6 +762,9 @@ html {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -790,7 +791,7 @@ html {
 .page .about__heading {
   color: #FBD214;
   margin-bottom: 35px;
-  font-size: 40px;
+  font-size: 50px;
   font-style: normal;
   font-weight: 700;
   display: -webkit-box;
@@ -800,6 +801,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  line-height: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -811,9 +813,9 @@ html {
 }
 
 .page .about__heading span {
-  font-size: 16px;
+  font-size: 26px;
   color: #f0fff0;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
@@ -1095,13 +1097,13 @@ html {
 .page .passion__heading {
   color: #FBD214;
   margin-bottom: 35px;
-  font-size: 40px;
+  font-size: 75px;
   font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
   .page .passion__heading {
-    font-size: 7.8vw;
+    font-size: 10.4vw;
     margin-bottom: 5.2vw;
   }
 }
@@ -1275,7 +1277,7 @@ html {
 }
 
 .page .works__heading {
-  font-size: 50px;
+  font-size: 75px;
   font-weight: 700;
   font-style: normal;
   color: #FBD214;
@@ -1293,6 +1295,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 60px;
+  line-height: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -1313,13 +1316,13 @@ html {
 
 @media screen and (max-width: 768px) {
   .page .works-content {
-    margin-bottom: 13vw;
+    margin-bottom: 19.5vw;
   }
 }
 
 @media screen and (max-width: 768px) {
   .page .works-content02 .works-content__heading {
-    max-width: 58.6vw;
+    max-width: 71.6vw;
   }
 }
 
@@ -1337,8 +1340,9 @@ html {
 
 @media screen and (max-width: 768px) {
   .page .works-content__heading {
-    max-width: 52.1vw;
-    font-size: 5.2vw;
+    max-width: 71.6vw;
+    width: 100%;
+    font-size: 6.5vw;
   }
 }
 
@@ -1465,6 +1469,15 @@ html {
   margin-top: 50px;
 }
 
+@media screen and (max-width: 768px) {
+  .page .works-content__button {
+    width: 39.1vw;
+    border-radius: 6.5vw;
+    border: 0.5vw solid #FBD214;
+    margin-top: 6.5vw;
+  }
+}
+
 .page .works-content__button .more-btn {
   font-size: 16px;
   color: #FBD214;
@@ -1473,12 +1486,25 @@ html {
   padding: 10px 0;
 }
 
+@media screen and (max-width: 768px) {
+  .page .works-content__button .more-btn {
+    padding: 1.3vw 0;
+    font-size: 4.2vw;
+  }
+}
+
 .page .works-content__button .more-btn:hover {
   color: #fff;
 }
 
 .page .works-content__button:hover {
   border: 2px solid #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .page .works-content__button:hover {
+    border: 0.5vw solid #fff;
+  }
 }
 
 .page .works-content .works-content-webapp {
@@ -1729,9 +1755,10 @@ html {
 .page .skills__heading {
   color: #FBD214;
   margin-bottom: 35px;
-  font-size: 50px;
+  font-size: 75px;
   font-weight: 700;
   text-align: center;
+  line-height: 1;
 }
 
 @media screen and (max-width: 768px) {
@@ -2048,21 +2075,26 @@ html {
   color: #FBD214;
 }
 
-.page .contacts {
-  padding-top: 150px;
-}
-
 @media screen and (max-width: 768px) {
   .page .contacts {
-    padding-top: 13vw;
+    padding-top: 11.7vw;
   }
 }
 
 .page .contacts__heading {
   color: #FBD214;
   margin-bottom: 35px;
-  font-size: 40px;
+  font-size: 70px;
+  font-weight: 700;
   text-align: center;
+  line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .page .contacts__heading {
+    font-size: 11.7vw;
+    margin-bottom: 5.2vw;
+  }
 }
 
 .page .contacts__text {
@@ -2070,25 +2102,23 @@ html {
   font-size: 20px;
   text-align: center;
   line-height: 1.5;
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
   margin-bottom: 60px;
 }
 
-.page .contacts__wrapper {
-  width: 1000px;
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .page .contacts__text {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page .contacts__text {
+    font-size: 2.9vw;
+    margin-bottom: 6.5vw;
+  }
 }
 
 .page .contacts__list {
@@ -2101,25 +2131,38 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 20px;
 }
 
-.page .contacts__form {
-  background-color: white;
-  max-width: 500px;
-  height: 500px;
-  margin-right: 50px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+@media screen and (max-width: 768px) {
+  .page .contacts__list {
+    margin-bottom: 3.3vw;
+  }
 }
 
 .page .contacts__item {
   margin-right: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .page .contacts__item {
+    margin-right: 3.9vw;
+  }
+}
+
 .page .contacts__item i {
   font-size: 50px;
   color: #FBD214;
+}
+
+@media screen and (max-width: 768px) {
+  .page .contacts__item i {
+    font-size: 13vw;
+  }
+}
+
+.page .contacts__item:nth-child(4) {
+  margin-right: 0;
 }
 
 .page .contacts__item:nth-child(4) i:hover {
@@ -2154,10 +2197,96 @@ html {
   transition: .3s ease-in;
 }
 
-.page .contacts__btn {
-  border: 2px solid #FBD214;
+.page .contacts__wrapper {
+  width: 100%;
+  max-width: 600px;
+  /* Adjust as needed */
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .page .contacts__wrapper {
+    max-width: 89.6vw;
+  }
+}
+
+.page .contacts__form {
+  background-color: white;
   border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  color: #FBD214;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .page .contacts__form {
+    border-radius: 2.6vw;
+    padding: 5.2vw;
+    -webkit-box-shadow: 0 0 2.6vw rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 2.6vw rgba(0, 0, 0, 0.1);
+    margin-bottom: 13vw;
+  }
+}
+
+.page .contacts .contacts__form label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .page .contacts .contacts__form label {
+    font-size: 3.4vw;
+    margin-bottom: 2.6vw;
+  }
+}
+
+.page .contacts .contacts__form input,
+.page .contacts .contacts__form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .page .contacts .contacts__form input,
+  .page .contacts .contacts__form textarea {
+    padding: 2.6vw;
+    border-radius: 1.3vw;
+    border: 0.3vw solid #000;
+    margin-bottom: 5.2vw;
+  }
+}
+
+.page .contacts .contacts__form button {
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  background-color: #FBD214;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .page .contacts .contacts__form button {
+    padding: 2.6vw;
+    border-radius: 1.3vw;
+    font-size: 4.2vw;
+  }
+}
+
+.page .contacts .contacts__form button:hover {
+  background-color: #e0ac1c;
 }
 /*# sourceMappingURL=style.css.map */
