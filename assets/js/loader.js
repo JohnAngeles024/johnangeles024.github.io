@@ -149,20 +149,52 @@ function update() {
 }
 
 
-// Wait for the page content to load
-window.addEventListener('load', function() {
-    // Add a delay before fading out the loader (in milliseconds)
-    var delay = 3000; // Adjust the delay duration as needed (in milliseconds)
+// // Wait for the page content to load
+// window.addEventListener('load', function() {
+//     // Add a delay before fading out the loader (in milliseconds)
+//     var delay = 3000; // Adjust the delay duration as needed (in milliseconds)
 
-    setTimeout(function() {
-        // Fade out the loader
-        var loader = document.getElementById('canvas');
-        loader.style.transition = 'opacity 0.5s ease';
+//     setTimeout(function() {
+//         // Fade out the loader
+//         var loader = document.getElementById('canvas');
+//         loader.style.transition = 'opacity 0.5s ease';
+//         loader.style.opacity = '0';
+
+//         // Remove the loader from the DOM after the fade-out animation completes
+//         setTimeout(function() {
+//             loader.parentNode.removeChild(loader);
+//         }, 600); // Adjust the timeout value to match the duration of the fade-out animation
+//     }, delay);
+// });
+
+window.addEventListener('load', function () {
+    var loader = document.getElementById('canvas');
+
+    // Check if loader has already been shown in this session
+    if (sessionStorage.getItem('loaderShown')) {
+        if (loader) {
+            loader.style.display = 'none'; // Instantly hide without animation
+        }
+        return;
+    }
+
+    // Set flag to avoid showing loader again this session
+    sessionStorage.setItem('loaderShown', 'true');
+
+    // Delay before fading out the loader (in ms)
+    var delay = 3000;
+
+    setTimeout(function () {
+        if (!loader) return;
+
+        // Fade out loader
         loader.style.opacity = '0';
 
-        // Remove the loader from the DOM after the fade-out animation completes
-        setTimeout(function() {
-            loader.parentNode.removeChild(loader);
-        }, 600); // Adjust the timeout value to match the duration of the fade-out animation
+        // After fade-out transition, remove loader
+        setTimeout(function () {
+            if (loader && loader.parentNode) {
+                loader.parentNode.removeChild(loader);
+            }
+        }, 600); // Match this with CSS transition duration (0.5s + buffer)
     }, delay);
 });
