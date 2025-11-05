@@ -72,6 +72,34 @@ $(function(){
   },1000);
 });
 
+
+$(function() {
+  // 連番クラス追加 (add sequential classes)
+  $('.page .works-content__list').each(function(i) {
+    $(this).addClass('js-tileHeight-' + i);
+    $(this).css('height', 'auto');
+  });
+
+  // 高さ揃えの実行 (equalize heights)
+  setTimeout(function() {
+    $('.page .works-content__list').each(function(i) {
+      var $list = $('.js-tileHeight-' + i);
+
+      // Equalize project__text heights
+      var textCount = $list.find('.project__text').length;
+      if (textCount > 0) {
+        $list.find('.project__text').tile(textCount);
+      }
+
+      // Equalize project__fig heights
+      var figCount = $list.find('.project__fig').length;
+      if (figCount > 0) {
+        $list.find('.project__fig').tile(figCount);
+      }
+    });
+  }, 1000);
+});
+
 window.addEventListener('scroll', function() {
   var navLinks = document.querySelectorAll('.nav__link');
   var fromTop = window.scrollY;
