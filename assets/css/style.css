@@ -1314,6 +1314,10 @@ html {
   margin-bottom: 100px;
 }
 
+  .page .works-content03 .works-content__heading {
+    max-width: 560px;
+  }
+
 @media screen and (max-width: 768px) {
   .page .works-content {
     margin-bottom: 19.5vw;
